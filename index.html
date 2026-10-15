@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="uz">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>UYJOY TOSHKENT — Yangi qurilishlar va xonadonlar</title>
+        <style>
+            :root {
+                --navy: #0b2a55;
+                --navy2: #123c7a;
+                --bg: #fff;
+                --soft: #f3f5f9;
+                --ink: #14213d;
+                --mut: #64708a;
+                --card: #fff;
+                --line: #e3e8f0;
+                --gold: #c9a24a;
+                --green: #1fa971;
+                --sh: 0 8px 30px rgba(11, 42, 85, .09);
+                box-sizing: border-box;
+                padding-top: env(safe-area-inset-top, 0px);
+                padding-bottom: env(safe-area-inset-bottom, 0px)
+            }
+
+            @media(prefers-color-scheme:dark) {
+                :root:not([data-theme="light"]) {
+                    --bg: #0c1426;
+                    --soft: #101b33;
+                    --ink: #e8edf7;
+                    --mut: #9aa7c2;
+                    --card: #14213d;
+                    --line: #233559;
+                    --sh: 0 8px 30px rgba(0, 0, 0, .35)
+                }
+            }
+
+            :root[data-theme="dark"] {
+                --bg: #0c1426;
+                --soft: #101b33;
+                --ink: #e8edf7;
+                --mut: #9aa7c2;
+                --card: #14213d;
+                --line: #233559;
+                --sh: 0 8px 30px rgba(0, 0, 0, .35)
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0
+            }
+
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: 80px
+            }
+
+            body {
+                font-family: Inter, "Segoe UI", system-ui, sans-serif;
+                background: var(--bg);
+                color: var(--ink);
+                line-height: 1.55
+            }
+
+            img {
+                max-width: 100%;
+                display: block
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none
+            }
+
+            .wrap {
+                max-width: 1200px;
+                margin: auto;
+                padding: 0 20px
+            }
+
+            section {
+                padding: 80px 0
+            }
+
+            .alt {
+                background: var(--soft)
+            }
+
+            h2 {
+                font-size: clamp(26px, 4vw, 38px);
+                color: var(--navy);
+                margin-bottom: 8px
+            }
+
+            @media(prefers-color-scheme:dark) {
+                :root:not([data-theme="light"]) h2 {
+                    color: #fff
+                }
+            }
+
+            .sub {
+                color: var(--mut);
+                margin-bottom: 34px
+            }
+
+            .tag {
+                color: var(--gold);
+                font-weight: 700;
+                letter-spacing: .12em;
+                font-size: 12px;
+                text-transform: uppercase
+            }
+
+            .btn {
+                display: inline-block;
+                border: 0;
+                cursor: pointer;
+                font: inherit;
+                font-weight: 600;
+                padding: 12px 22px;
+                border-radius: 12px;
+                background: var(--navy);
+                color: #fff;
+                transition: .25s;
+                min-height: 44px
+            }
+
+            .btn:hover {
+                transform: translateY(-2px);
+                background: var(--navy2)
+            }
+
+            .btn.gold {
+                background: var(--gold);
+                color: #1a1a1a
+            }
+
+            .btn.line {
+                background: transparent;
+                color: var(--navy);
+                border: 1.5px solid var(--navy)
+            }
+
+            @media(prefers-color-scheme:dark) {
+                :root:not([data-theme="light"]) .btn.line {
+                    color: #fff;
+                    border-color: #fff
+                }
+            }
+
+            header {
+                position: sticky;
+                top: 0;
+                z-index: 50;
+                background: rgba(255, 255, 255, .92);
+                backdrop-filter: blur(12px);
+                border-bottom: 1px solid var(--line)
+            }
+
+            @media(prefers-color-scheme:dark) {
+                :root:not([data-theme="light"]) header {
+                    background: rgba(12, 20, 38, .92)
+                }
+            }
+
+            .nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 70px;
+                gap: 16px
+            }
+
+            .logo {
+                font-weight: 800;
+                font-size: 24px;
+                color: var(--navy);
+                letter-spacing: .04em
+            }
+
+            .logo b {
+                color: var(--gold)
+            }
+
+            @media(prefers-color-scheme:dark) {
+                :root:not([data-theme="light"]) .logo {
+                    color: #fff
+                }
+            }
+
+            nav ul {
+                display: flex;
+                gap: 22px;
+                list-style: none;
+                font-size: 14.5px;
+                font-weight: 500
+            }
+
+            nav a:hover {
+                color: var(--gold)
+            }
+
+            .burger {
+                display: none;
+                background: none;
+                border: 0;
+                font-size: 28px;
+                cursor: pointer;
+                color: var(--ink);
+                min-width: 44px;
+                min-height: 44px
+            }
+
+            .hero {
+                position: relative;
+                min-height: 88vh;
+                display: flex;
+                align-items: center;
+                color: #fff;
+                background-size: cover;
+                background-position: center;
+                padding: 90px 0 130px
+            }
+
+            .hero:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(180deg, rgba(7, 24, 52, .55), rgba(7, 24, 52, .85))
+            }
+
+            .hero .wrap {
+                position: relative;
+                width: 100%
+            }
+
+            .hero h1 {
+                font-size: clamp(34px, 6vw, 64px);
+                line-height: 1.1;
+                max-width: 760px;
+                margin: 12px 0 16px
+            }
+
+            .hero p {
+                font-size: 18px;
+                max-width: 560px;
+                opacity: .9
+            }
+
+            .search {
+                position: relative;
+                margin-top: -70px;
+                z-index: 5
+            }
+
+            .panel {
+                background: var(--card);
+                border-radius: 20px;
+                box-shadow: var(--sh);
+                padding: 22px;
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                gap: 12px;
+                align-items: end
+            }
+
+            .panel label {
+                font-size: 12px;
+                color: var(--mut);
+                font-weight: 600;
+                display: block;
+                margin-bottom: 4px
+            }
+
+            select,
+            input,
+            textarea {
+                width: 100%;
+                font: inherit;
+                padding: 11px 12px;
+                border: 1.5px solid var(--line);
+                border-radius: 10px;
+                background: var(--bg);
+                color: var(--ink);
+                min-height: 44px
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+                gap: 22px
+            }
+
+            .card {
+                background: var(--card);
+                border-radius: 20px;
+                box-shadow: var(--sh);
+                overflow: hidden;
+                transition: .3s;
+                border: 1px solid var(--line)
+            }
+
+            .card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 18px 44px rgba(11, 42, 85, .18)
+            }
+
+            .ph {
+                aspect-ratio: 4/3;
+                overflow: hidden;
+                position: relative
+            }
+
+            .ph img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: .5s
+            }
+
+            .card:hover .ph img {
+                transform: scale(1.07)
+            }
+
+            .badge {
+                position: absolute;
+                top: 12px;
+                left: 12px;
+                background: var(--gold);
+                color: #1a1a1a;
+                font-size: 12px;
+                font-weight: 700;
+                padding: 4px 10px;
+                border-radius: 20px
+            }
+
+            .cb {
+                padding: 18px
+            }
+
+            .cb h3 {
+                font-size: 18px;
+                color: var(--navy)
+            }
+
+            @media(prefers-color-scheme:dark) {
+                :root:not([data-theme="light"]) .cb h3 {
+                    color: #fff
+                }
+            }
+
+            .loc {
+                color: var(--mut);
+                font-size: 13.5px;
+                margin: 2px 0 10px
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+                margin-bottom: 12px
+            }
+
+            .meta span {
+                background: var(--soft);
+                border-radius: 8px;
+                padding: 3px 9px;
+                font-size: 12.5px
+            }
+
+            .price {
+                font-size: 20px;
+                font-weight: 800;
+                color: var(--green);
+                margin-bottom: 12px
+            }
+
+            .row {
+                display: flex;
+                gap: 8px
+            }
+
+            .row .btn {
+                flex: 1;
+                padding: 10px;
+                font-size: 14px
+            }
+
+            .dc {
+                position: relative;
+                border-radius: 20px;
+                overflow: hidden;
+                cursor: pointer;
+                aspect-ratio: 4/3;
+                color: #fff;
+                box-shadow: var(--sh);
+                transition: .3s
+            }
+
+            .dc:hover {
+                transform: translateY(-6px)
+            }
+
+            .dc img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: .5s
+            }
+
+            .dc:hover img {
+                transform: scale(1.08)
+            }
+
+            .dc .ov {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(180deg, transparent 25%, rgba(7, 24, 52, .92));
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                font-size: 13px
+            }
+
+            .dc h3 {
+                font-size: 20px
+            }
+
+            .dc .btn {
+                margin-top: 10px;
+                padding: 8px 14px;
+                min-height: 36px;
+                background: var(--gold);
+                color: #111;
+                align-self: flex-start
+            }
+
+            .tabs {
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+                margin-bottom: 24px
+            }
+
+            .tabs button {
+                border: 1.5px solid var(--line);
+                background: var(--card);
+                color: var(--ink);
+                padding: 10px 18px;
+                border-radius: 30px;
+                cursor: pointer;
+                font: inherit;
+                font-weight: 600;
+                min-height: 44px
+            }
+
+            .tabs button.on {
+                background: var(--navy);
+                color: #fff;
+                border-color: var(--navy)
+            }
+
+            .map {
+                position: relative;
+                background: var(--card);
+                border-radius: 22px;
+                box-shadow: var(--sh);
+                overflow: hidden;
+                border: 1px solid var(--line)
+            }
+
+            .map svg {
+                width: 100%;
+                height: auto;
+                display: block
+            }
+
+            .pin {
+                cursor: pointer
+            }
+
+            .pin:hover circle {
+                r: 13
+            }
+
+            #mapinfo {
+                padding: 16px 20px;
+                border-top: 1px solid var(--line);
+                min-height: 64px
+            }
+
+            .comp {
+                text-align: center;
+                padding: 26px 20px
+            }
+
+            .lg {
+                width: 68px;
+                height: 68px;
+                border-radius: 18px;
+                margin: 0 auto 14px;
+                display: grid;
+                place-items: center;
+                color: #fff;
+                font-weight: 800;
+                font-size: 22px
+            }
+
+            .feat {
+                padding: 28px
+            }
+
+            .feat i {
+                font-style: normal;
+                font-size: 34px;
+                display: block;
+                margin-bottom: 10px
+            }
+
+            .stats {
+                background: linear-gradient(135deg, var(--navy), var(--navy2));
+                color: #fff;
+                padding: 60px 0
+            }
+
+            .stats .grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                text-align: center
+            }
+
+            .stats b {
+                display: block;
+                font-size: 46px;
+                color: var(--gold)
+            }
+
+            .calc {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 26px
+            }
+
+            .calc>div {
+                background: var(--card);
+                padding: 28px;
+                border-radius: 22px;
+                box-shadow: var(--sh)
+            }
+
+            .calc label {
+                font-size: 13px;
+                font-weight: 600;
+                color: var(--mut);
+                display: block;
+                margin: 12px 0 4px
+            }
+
+            .res {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background: linear-gradient(135deg, var(--navy), var(--navy2)) !important;
+                color: #fff
+            }
+
+            .res b {
+                font-size: clamp(28px, 5vw, 44px);
+                color: var(--gold)
+            }
+
+            .form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 14px;
+                background: var(--card);
+                padding: 30px;
+                border-radius: 22px;
+                box-shadow: var(--sh)
+            }
+
+            .form .full {
+                grid-column: 1/-1
+            }
+
+            footer {
+                background: #071a38;
+                color: #b8c4dc;
+                padding: 60px 0 24px
+            }
+
+            footer .grid {
+                grid-template-columns: 2fr 1fr 1fr 1.3fr
+            }
+
+            footer h4 {
+                color: #fff;
+                margin-bottom: 12px
+            }
+
+            footer li {
+                list-style: none;
+                margin: 6px 0;
+                font-size: 14px
+            }
+
+            footer .logo {
+                color: #fff
+            }
+
+            .copy {
+                border-top: 1px solid #1d3560;
+                margin-top: 36px;
+                padding-top: 18px;
+                font-size: 13px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 8px
+            }
+
+            .modal {
+                position: fixed;
+                inset: 0;
+                background: rgba(5, 15, 35, .7);
+                z-index: 100;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                padding: 16px
+            }
+
+            .modal.on {
+                display: flex;
+                animation: f .25s
+            }
+
+            .mb {
+                background: var(--card);
+                border-radius: 22px;
+                max-width: 960px;
+                width: 100%;
+                max-height: 92vh;
+                overflow: auto;
+                position: relative
+            }
+
+            .mb .x {
+                position: absolute;
+                top: 12px;
+                right: 12px;
+                z-index: 2;
+                border: 0;
+                background: #fff;
+                color: #111;
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                font-size: 22px;
+                cursor: pointer
+            }
+
+            .mb .big {
+                aspect-ratio: 16/8;
+                width: 100%;
+                object-fit: cover
+            }
+
+            .thumbs {
+                display: flex;
+                gap: 8px;
+                padding: 10px 20px 0
+            }
+
+            .thumbs img {
+                width: 90px;
+                height: 62px;
+                object-fit: cover;
+                border-radius: 10px;
+                cursor: pointer;
+                opacity: .7
+            }
+
+            .thumbs img:hover {
+                opacity: 1
+            }
+
+            .mi {
+                padding: 20px 24px 26px
+            }
+
+            .facts {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 10px;
+                margin: 14px 0
+            }
+
+            .facts div {
+                background: var(--soft);
+                padding: 10px 12px;
+                border-radius: 12px;
+                font-size: 13px
+            }
+
+            .facts b {
+                display: block;
+                font-size: 15px
+            }
+
+            .rv {
+                opacity: 0;
+                transform: translateY(24px);
+                transition: .7s
+            }
+
+            .rv.in {
+                opacity: 1;
+                transform: none
+            }
+
+            @keyframes f {
+                from {
+                    opacity: 0
+                }
+            }
+
+            @media(max-width:900px) {
+                .panel {
+                    grid-template-columns: 1fr 1fr
+                }
+
+                .calc,
+                footer .grid {
+                    grid-template-columns: 1fr
+                }
+
+                .form {
+                    grid-template-columns: 1fr
+                }
+
+                .burger {
+                    display: block
+                }
+
+                nav ul {
+                    display: none;
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    right: 0;
+                    background: var(--bg);
+                    flex-direction: column;
+                    padding: 18px 24px;
+                    gap: 16px;
+                    border-bottom: 1px solid var(--line)
+                }
+
+                nav ul.on {
+                    display: flex
+                }
+
+                .nav>.btn {
+                    display: none
+                }
+
+                section {
+                    padding: 56px 0
+                }
+            }
+
+            @media(max-width:560px) {
+                .panel {
+                    grid-template-columns: 1fr
+                }
+
+                .grid {
+                    grid-template-columns: 1fr
+                }
+
+                .hero {
+                    min-height: 80vh
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="wrap nav"><a class="logo" href="#top">UYJOY<b>.</b></a>
+                <nav>
+                    <ul id="menu">
+                        <li><a href="#top">Bosh sahifa</a></li>
+                        <li><a href="#new">Yangi qurilishlar</a></li>
+                        <li><a href="#flats">Xonadonlar</a></li>
+                        <li><a href="#districts">Tumanlar</a></li>
+                        <li><a href="#companies">Qurilish kompaniyalari</a></li>
+                        <li><a href="#why">Biz haqimizda</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <a class="btn gold" href="#new">Uy topish</a><button class="burger" id="bg"
+                    aria-label="Menyu">☰</button>
+            </div>
+        </header>
+
+        <div class="hero" id="top">
+            <div class="wrap"><span class="tag">UYJOY TOSHKENT</span>
+                <h1>Orzuingizdagi uyni Toshkentdan toping</h1>
+                <p>Yangi qurilishlar, zamonaviy xonadonlar va ishonchli qurilish loyihalari bir joyda.</p>
+            </div>
+        </div>
+        <div class="search">
+            <div class="wrap">
+                <div class="panel">
+                    <div><label>Tuman</label><select id="fd"></select></div>
+                    <div><label>Uy turi</label><select id="ft">
+                            <option value="">Barchasi</option>
+                            <option>Yangi qurilish</option>
+                            <option>Tayyor uy</option>
+                            <option>Premium</option>
+                        </select></div>
+                    <div><label>Xonalar soni</label><select id="fr">
+                            <option value="">Barchasi</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select></div>
+                    <div><label>Min narx (mln so‘m)</label><input id="fmin" type="number" placeholder="500"></div>
+                    <div><label>Maks narx (mln so‘m)</label><input id="fmax" type="number" placeholder="3000"></div>
+                    <button class="btn gold" id="fgo">Qidirish</button>
+                </div>
+            </div>
+        </div>
+
+        <section id="new">
+            <div class="wrap rv"><span class="tag">Loyihalar</span>
+                <h2>Toshkentdagi yangi qurilishlar</h2>
+                <p class="sub" id="cnt"></p>
+                <div class="grid" id="props"></div>
+            </div>
+        </section>
+
+        <section class="alt" id="flats">
+            <div class="wrap rv"><span class="tag">Xonadonlar</span>
+                <h2>Sotuvdagi xonadonlar</h2>
+                <p class="sub">Xonalar soni bo‘yicha tanlang.</p>
+                <div class="tabs" id="tabs"></div>
+                <div class="grid" id="fl"></div>
+            </div>
+        </section>
+
+        <section id="districts">
+            <div class="wrap rv"><span class="tag">Tumanlar</span>
+                <h2>Toshkent tumanlari</h2>
+                <p class="sub">Tumanni bosing — shu hududdagi uylar ko‘rsatiladi.</p>
+                <div class="grid" id="dg"></div>
+            </div>
+        </section>
+
+        <section class="alt" id="mapsec">
+            <div class="wrap rv"><span class="tag">Xarita</span>
+                <h2>Toshkentdagi qurilishlar xaritasi</h2>
+                <p class="sub">Markerni bosib loyiha haqida ma’lumot oling.</p>
+                <div class="map"><svg viewBox="0 0 800 460" id="msvg"></svg>
+                    <div id="mapinfo">Marker tanlang.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="companies">
+            <div class="wrap rv"><span class="tag">Hamkorlar</span>
+                <h2>Yetakchi qurilish kompaniyalari</h2>
+                <p class="sub">&nbsp;</p>
+                <div class="grid" id="cg"></div>
+            </div>
+        </section>
+
+        <section class="alt" id="why">
+            <div class="wrap rv"><span class="tag">Afzalliklar</span>
+                <h2>UYJOY TOSHKENT nega?</h2>
+                <p class="sub">&nbsp;</p>
+                <div class="grid">
+                    <div class="card feat"><i>🛡️</i>
+                        <h3>Ishonchli loyihalar</h3>
+                        <p class="loc">Faqat tekshirilgan quruvchilar va hujjatlari to‘liq loyihalar.</p>
+                    </div>
+                    <div class="card feat"><i>🔎</i>
+                        <h3>Qulay qidiruv</h3>
+                        <p class="loc">Tuman, narx, xona soni va turi bo‘yicha tez filter.</p>
+                    </div>
+                    <div class="card feat"><i>📋</i>
+                        <h3>Batafsil ma’lumot</h3>
+                        <p class="loc">Infratuzilma, masofalar, ta’mir holati va to‘liq tavsif.</p>
+                    </div>
+                    <div class="card feat"><i>🏙️</i>
+                        <h3>Toshkentning barcha tumanlari</h3>
+                        <p class="loc">12 ta tuman bo‘yicha yangi qurilishlar bir joyda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="stats">
+            <div class="wrap grid">
+                <div><b data-n="120">0</b>qurilish loyihalari</div>
+                <div><b data-n="2500">0</b>sotuvdagi xonadonlar</div>
+                <div><b data-n="12">0</b>Toshkent tumani</div>
+                <div><b data-n="50">0</b>qurilish kompaniyalari</div>
+            </div>
+        </div>
+
+        <section id="mort">
+            <div class="wrap rv"><span class="tag">Ipoteka</span>
+                <h2>Ipoteka kalkulyatori</h2>
+                <p class="sub">Taxminiy oylik to‘lovni hisoblang.</p>
+                <div class="calc">
+                    <div><label>Uy narxi (so‘m)</label><input id="c1" type="number" value="1200000000">
+                        <label>Boshlang‘ich to‘lov (so‘m)</label><input id="c2" type="number" value="360000000">
+                        <label>Kredit muddati (yil)</label><input id="c3" type="number" value="15">
+                        <label>Yillik foiz stavkasi (%)</label><input id="c4" type="number" value="17" step=".1">
+                    </div>
+                    <div class="res"><span>Oylik to‘lov (taxminan)</span><b id="r1">—</b>
+                        <p id="r2" style="opacity:.85;margin-top:10px"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt" id="contact">
+            <div class="wrap rv"><span class="tag">Kontakt</span>
+                <h2>Uy tanlashda yordam beramiz</h2>
+                <p class="sub">Arizani qoldiring — mutaxassisimiz 15 daqiqada bog‘lanadi.</p>
+                <div class="form" id="form"><input id="n" placeholder="Ism"><input id="p" type="tel"
+                        placeholder="Telefon raqam">
+                    <select id="d" class="full"></select><textarea id="m" class="full" rows="4"
+                        placeholder="Xabar"></textarea>
+                    <button class="btn gold full" id="send">Ariza yuborish</button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="wrap">
+                <div class="grid">
+                    <div><a class="logo" href="#top">UYJOY<b>.</b> TOSHKENT</a>
+                        <p style="margin-top:12px;font-size:14px">Toshkentdagi yangi qurilishlar va ko‘chmas mulk
+                            sotuvlari platformasi.</p>
+                    </div>
+                    <div>
+                        <h4>Menyu</h4>
+                        <ul>
+                            <li><a href="#new">Yangi qurilishlar</a></li>
+                            <li><a href="#flats">Xonadonlar</a></li>
+                            <li><a href="#companies">Kompaniyalar</a></li>
+                            <li><a href="#mort">Ipoteka</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Tumanlar</h4>
+                        <ul id="fdl"></ul>
+                    </div>
+                    <div>
+                        <h4>Kontaktlar</h4>
+                        <ul>
+                            <li>📞 +998 71 200 00 00</li>
+                            <li>✉️ info@uyjoy.uz</li>
+                            <li>📍 Toshkent sh., Amir Temur ko‘chasi</li>
+                            <li>Telegram · Instagram · Facebook · YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copy"><span>© 2026 UYJOY TOSHKENT. Barcha huquqlar himoyalangan.</span><span>Barcha
+                        ma’lumotlar demo xarakterga ega.</span></div>
+            </div>
+        </footer>
+
+        <div class="modal" id="modal">
+            <div class="mb" id="mb"></div>
+        </div>
+
+        <script>
+            const $ = s => document.querySelector(s), D = ["Chilonzor", "Yunusobod", "Mirzo Ulug‘bek", "Shayxontohur", "Yakkasaroy", "Mirobod", "Sergeli", "Uchtepa", "Olmazor", "Bektemir", "Yashnobod", "Yangihayot"];
+            const fmt = m => m >= 1000 ? (m / 1000).toFixed(1).replace(".0", "") + " mlrd so‘mdan" : m + " mln so‘mdan";
+            let sd = 7; const rnd = () => (sd = (sd * 9301 + 49297) % 233280) / 233280;
+            function img(h, s) {
+                sd = s * 13 + 5; let b = ""; let x = 0; while (x < 800) {
+                    const w = 70 + rnd() * 90, ht = 140 + rnd() * 300, y = 500 - ht, l = 30 + rnd() * 20;
+                    b += `<rect x="${x}" y="${y}" width="${w}" height="${ht}" fill="hsl(${h},${25 + rnd() * 25}%,${l}%)"/>`;
+                    for (let wy = y + 14; wy < 480; wy += 22)for (let wx = x + 10; wx < x + w - 14; wx += 20)b += `<rect x="${wx}" y="${wy}" width="9" height="12" fill="${rnd() > .35 ? "#ffe9a8" : "#9db8d8"}" opacity=".85"/>`; x += w + 6
+                }
+                const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="hsl(${h},60%,${55 + s % 3 * 6}%)"/><stop offset="1" stop-color="#fbe3b5"/></linearGradient></defs><rect width="800" height="500" fill="url(#g)"/><circle cx="${600 - s * 20}" cy="90" r="42" fill="#fff6d6" opacity=".8"/>${b}<rect y="480" width="800" height="20" fill="#2f6b48"/></svg>`;
+                return "data:image/svg+xml," + encodeURIComponent(svg)
+            }
+            const N = ["New City Residence", "Tashkent City Residence", "Green Park", "Grand House", "City House", "Boulevard Residence", "Dream House", "Modern Residence", "Sunrise Towers", "Park Avenue Tashkent", "Silk Road Residence", "Navruz Plaza"];
+            const P = N.map((n, i) => {
+                const r = i % 4 + 1, a = [38, 56, 82, 115][r - 1] + i % 3 * 4; return {
+                    id: i, n, d: D[(i * 5) % 12], addr: `${D[(i * 5) % 12]} tumani, ${10 + i * 3}-mavze`, r, a, fl: 3 + i * 2 % 14, fm: 12 + i % 5 * 3, date: ["2026 IV chorak", "2027 I chorak", "2027 II chorak", "Topshirilgan"][i % 4], pr: Math.round(a * (14 + i % 4 * 2.5)), t: ["Yangi qurilish", "Yangi qurilish", "Premium", "Tayyor uy"][i % 4], yr: [2026, 2027, 2025, 2024][i % 4], rep: ["Qora suvoq", "Oq suvoq", "To‘liq ta’mir", "Dizaynerlik ta’mir"][i % 4], bal: i % 3 ? "Bor" : "Yo‘q", pk: i % 2 ? "Yer osti" : "Ochiq", sch: 200 + i * 60, kg: 150 + i * 40, mt: 400 + i * 180, h: 205 + i * 6,
+                    desc: `${n} — ${D[(i * 5) % 12]} tumanidagi zamonaviy turar-joy majmuasi. Yopiq hudud, bolalar maydonchasi, yashil xiyobon, tijorat qavatlari va qulay transport yo‘nalishlari mavjud.`
+                }
+            });
+            const AP = []; for (let i = 0; i < 16; i++) { const r = i % 4 + 1, a = [36, 54, 78, 110][r - 1] + i % 5 * 3; AP.push({ ...P[i % 12], id: 100 + i, n: `${r} xonali xonadon — ${P[(i + 3) % 12].n}`, r, a, pr: Math.round(a * (13 + i % 5 * 2)), d: D[(i * 7) % 12], addr: `${D[(i * 7) % 12]} tumani`, fl: 2 + i % 12, h: 200 + i * 9, rep: ["Ta’mirsiz", "Yaxshi ta’mir", "Evro ta’mir", "Dizaynerlik"][i % 4], bal: i % 3 ? "Bor" : "Yo‘q", pk: i % 2 ? "Bor" : "Yo‘q", t: "Tayyor uy", date: "Hozir" }) }
+            const ALL = P.concat(AP), byId = id => ALL.find(x => x.id == id);
+            const card = (p, fl) => `<div class="card"><div class="ph"><img loading="lazy" src="${img(p.h, p.id)}" alt="${p.n}"><span class="badge">${p.t}</span></div><div class="cb"><h3>${p.n}</h3><p class="loc">📍 ${p.d} · ${p.addr}</p>
+<div class="meta"><span>${p.r} xona</span><span>${p.a} m²</span><span>${p.fl}-qavat</span>${fl ? `<span>${p.rep}</span><span>Balkon: ${p.bal}</span><span>Parking: ${p.pk}</span>` : `<span>${p.date}</span>`}</div>
+<div class="price">${fmt(p.pr)}</div><div class="row"><button class="btn" onclick="openM(${p.id})">${fl ? "Ko‘rish" : "Batafsil"}</button>${fl ? "" : `<a class="btn line" href="#contact">Bog‘lanish</a>`}</div></div></div>`;
+            function filt() {
+                const d = $("#fd").value, t = $("#ft").value, r = $("#fr").value, mn = +$("#fmin").value || 0, mx = +$("#fmax").value || 1e9;
+                const l = P.filter(p => (!d || p.d == d) && (!t || p.t == t) && (!r || p.r == r) && p.pr >= mn && p.pr <= mx);
+                $("#props").innerHTML = l.length ? l.map(p => card(p)).join("") : "<p>Mos uy topilmadi. Filterni o‘zgartiring.</p>"; $("#cnt").textContent = `${l.length} ta loyiha topildi`
+            }
+            $("#fd").innerHTML = '<option value="">Barcha tumanlar</option>' + D.map(x => `<option>${x}</option>`).join("");
+            $("#d").innerHTML = '<option value="">Qiziqayotgan tuman</option>' + D.map(x => `<option>${x}</option>`).join("");
+            $("#fdl").innerHTML = D.slice(0, 6).map(x => `<li>${x}</li>`).join("");
+            ["fd", "ft", "fr", "fmin", "fmax"].forEach(i => $("#" + i).addEventListener("input", filt));
+            $("#fgo").onclick = () => { filt(); $("#new").scrollIntoView() };
+            $("#dg").innerHTML = D.map((x, i) => { const c = P.filter(p => p.d == x).length; return `<div class="dc" onclick="pick('${x}')"><img loading="lazy" src="${img(190 + i * 12, i + 30)}" alt="${x}"><div class="ov"><h3>${x}</h3><span>Yangi qurilishlar: ${c + 2}</span><span>Sotuvdagi xonadonlar: ${60 + i * 17}</span><span>Loyihalar soni: ${c + 3}</span><button class="btn">Ko‘rish</button></div></div>` }).join("");
+            function pick(x) { $("#fd").value = x; filt(); $("#new").scrollIntoView() }
+            function tabs(r) { $("#tabs").innerHTML = [1, 2, 3, 4].map(k => `<button class="${k == r ? "on" : ""}" onclick="tabs(${k})">${k} xonali</button>`).join(""); $("#fl").innerHTML = AP.filter(p => p.r == r).map(p => card(p, 1)).join("") } tabs(1);
+            function openM(id) {
+                const p = byId(id), im = [0, 1, 2].map(k => img(p.h + k * 8, p.id + k * 3));
+                $("#mb").innerHTML = `<button class="x" onclick="closeM()">✕</button><img class="big" id="bigi" src="${im[0]}" alt=""><div class="thumbs">${im.map(s => `<img src="${s}" onclick="bigi.src=this.src" alt="">`).join("")}</div>
+<div class="mi"><h2>${p.n}</h2><p class="loc">📍 ${p.addr}</p><div class="price" style="font-size:28px">${fmt(p.pr)}</div>
+<div class="facts"><div>Xona soni<b>${p.r}</b></div><div>Maydon<b>${p.a} m²</b></div><div>Qavat<b>${p.fl}</b></div><div>Qurilgan yil<b>${p.yr}</b></div><div>Parking<b>${p.pk}</b></div><div>Maktabgacha<b>${p.sch} m</b></div><div>Bog‘chagacha<b>${p.kg} m</b></div><div>Metrogacha<b>${p.mt} m</b></div></div>
+<p><b>Infratuzilma:</b> maktab, bog‘cha, supermarket, dorixona, park va jamoat transporti yaqin.</p><p style="margin:10px 0 18px">${p.desc}</p><a class="btn gold" href="#contact" onclick="closeM()">Bog‘lanish</a></div>`; $("#modal").classList.add("on")
+            }
+            function closeM() { $("#modal").classList.remove("on") } $("#modal").onclick = e => { if (e.target.id == "modal") closeM() };
+            // map
+            const pos = [[250, 240], [480, 90], [560, 200], [330, 200], [400, 260], [450, 230], [360, 380], [230, 190], [330, 130], [560, 320], [520, 250], [430, 420]];
+            let ms = '<rect width="800" height="460" fill="#e8eef7"/><path d="M0 250 Q200 200 330 260 T800 190" stroke="#9cc3e6" stroke-width="14" fill="none" opacity=".7"/>';
+            pos.forEach((q, i) => ms += `<circle cx="${q[0]}" cy="${q[1]}" r="62" fill="hsl(${200 + i * 10},45%,${80 - i % 3 * 4}%)" opacity=".7"/><text x="${q[0]}" y="${q[1] + 46}" text-anchor="middle" font-size="12" fill="#14304f" font-weight="600">${D[i]}</text>`);
+            P.forEach((p, i) => { const q = pos[D.indexOf(p.d)]; ms += `<g class="pin" onclick="mi(${p.id})"><circle cx="${q[0] + (i % 3 - 1) * 20}" cy="${q[1] - 10 - (i % 2) * 14}" r="10" fill="#c9a24a" stroke="#fff" stroke-width="3"/></g>` });
+            $("#msvg").innerHTML = ms;
+            function mi(id) { const p = byId(id); $("#mapinfo").innerHTML = `<b>${p.n}</b> — ${p.d} · ${p.r} xona · ${fmt(p.pr)} <button class="btn" style="margin-left:10px;padding:6px 14px;min-height:36px" onclick="openM(${id})">Batafsil</button>` }
+            const C = ["Mega Build", "Tashkent Invest", "Golden House", "Sapphire Group", "Murad Buildings", "Infinity Qurilish"], col = ["#0b2a55", "#1fa971", "#c9a24a", "#7a3ec2", "#d1495b", "#1c7ed6"];
+            $("#cg").innerHTML = C.map((c, i) => `<div class="card comp"><div class="lg" style="background:${col[i]}">${c.split(" ").map(w => w[0]).join("")}</div><h3>${c}</h3><p class="loc">Qurilgan loyihalar: ${12 + i * 5}</p><p class="loc">Faol loyihalar: ${3 + i}</p><a class="btn line" href="#new">Loyihalarni ko‘rish</a></div>`).join("");
+            function calc() {
+                const pr = +$("#c1").value, dp = +$("#c2").value, y = +$("#c3").value, r = +$("#c4").value / 1200, L = pr - dp, n = y * 12; if (L <= 0 || n <= 0) return $("#r1").textContent = "—";
+                const m = r ? L * r / (1 - Math.pow(1 + r, -n)) : L / n, f = x => Math.round(x).toLocaleString("ru-RU"); $("#r1").textContent = f(m) + " so‘m"; $("#r2").textContent = `Kredit summasi: ${f(L)} so‘m · Jami to‘lov: ${f(m * n)} so‘m`
+            }
+            ["c1", "c2", "c3", "c4"].forEach(i => $("#" + i).addEventListener("input", calc)); calc();
+            $("#send").onclick = () => { if (!$("#n").value || !$("#p").value) return alert("Ism va telefon raqamni kiriting."); alert("Rahmat! Arizangiz qabul qilindi.");["n", "p", "m", "d"].forEach(i => $("#" + i).value = "") };
+            $("#bg").onclick = () => $("#menu").classList.toggle("on"); $("#menu").onclick = () => $("#menu").classList.remove("on");
+            $(".hero").style.backgroundImage = `url("${img(212, 3)}")`;
+            const io = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target) } }), { threshold: .08 }); document.querySelectorAll(".rv").forEach(e => io.observe(e));
+            const so = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) { const t = +x.target.dataset.n; let c = 0; const k = setInterval(() => { c += Math.ceil(t / 40); if (c >= t) { c = t; clearInterval(k) } x.target.textContent = c + (t > 12 ? "+" : "") }, 30); so.unobserve(x.target) } })); document.querySelectorAll("[data-n]").forEach(e => so.observe(e));
+            filt();
+        </script>
+    </body>
+
+    </html>
+
+
+</body>
+
+</html>
